@@ -10,6 +10,21 @@
         your browser does not support the HTML5 canvas
     </canvas>
     <script type="text/javascript" src="src/WebGL.js"></script>
+    <script type="text/javascript" src="src/VertexBuffer.js"></script>
+    <script type="x-shader/x-vertex" id="vertexShader">
+        attribute vec3 aPosition;
+        void main() {
+            gl_Position = vec4( aPosition, 1.0 );
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentShader">
+        void main() {
+            gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 );
+        }
+    </script>
+
+    <script type="text/javascript" src="src/ShaderSupport.js"></script>
 
     <div> content </div>
 
